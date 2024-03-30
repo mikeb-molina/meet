@@ -4,7 +4,7 @@
 
 ## User Stories:
 
-## 1: Filter Events by City. 
+### 1: Filter Events by City. 
 	As a user,
 	I should be able to filter events by city,
 	So that I can see a list of events taking place in that city.
@@ -38,7 +38,7 @@ So that I can look into each event and see more information.
 
 ## Gherkins Syntax:
 
-## 1: Filter events by city.
+### 1: Filter events by city.
 Scenario 1: When the user hasn’t searched for a city, show upcoming events from all cities. 
 -Given the user hasn’t searched for any city;
 -When the user opens the app;
@@ -54,7 +54,7 @@ Scenario 1: When the user hasn’t searched for a city, show upcoming events fro
 		-When the user selects a city from the list;
 		-Then their city should be changed to that city AND the user should receive a list of upcoming events in that city.
 
-## 2 Show/Hide Event Details
+### 2 Show/Hide Event Details
 
 ### Scenario 1: An event element is collapsed by default.
 		-Given the user has selected a city;
@@ -71,7 +71,7 @@ Scenario 1: When the user hasn’t searched for a city, show upcoming events fro
 		-When the user clicks a button to hide the information about this event;
 		-Then the details of the event will disappear and the user will be returned to the list of upcoming events.
 
-## 3 Specify Number of Events
+### 3 Specify Number of Events
 
 ### Scenario 1: When the user hasn’t specified a number, 32 events are shown by default.
 		-Given the user selects a city to view upcoming events;
@@ -83,7 +83,7 @@ Scenario 1: When the user hasn’t searched for a city, show upcoming events fro
 		-When the user inputs a new number of events to view;
 		-Then the app will show the number of events specified by the user.
 
-## 4 Use the App When Offline
+### 4 Use the App When Offline
 
 ### Scenario 1: Show cached data when there’s no internet connection.
 		-Given the user is trying to view the app with no internet connection;
@@ -95,7 +95,7 @@ Scenario 1: When the user hasn’t searched for a city, show upcoming events fro
 		-When the user tries to change the search criteria;
 		-The app will return an error message with a message stating the app is offline.
 
-## 5 Add an App Shortcut to Home Screen 
+### 5 Add an App Shortcut to Home Screen 
 
 ### Scenario 1: User can install the meet app as a shortcut on their device home screen.
 		-Given the user clicks the “create shortcut” button;
