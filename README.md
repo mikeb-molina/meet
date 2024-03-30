@@ -1,48 +1,49 @@
 # Objective:
-    To build a serverless, progressive web application (PWA) with Raect using a test-driven development (TDD) technique. The application uses the Google Calendat API to fetch upcoming events.
+
+To build a serverless, progressive web application (PWA) with Raect using a test-driven development (TDD) technique. The application uses the Google Calendat API to fetch upcoming events.
 
 
 ## User Stories:
 
 ### 1: Filter Events by City. 
-	As a user,
-	I should be able to filter events by city,
-	So that I can see a list of events taking place in that city.
+As a user,
+I should be able to filter events by city,
+So that I can see a list of events taking place in that city.
 	
 ### 2: Show/Hide Event Details. 
-    As a user,
-    I should be able to show and hide event details
-    So that I can look into each event and see more information.
+As a user,
+I should be able to show and hide event details
+So that I can look into each event and see more information.
 
 ### 3: Specify Number of Events. 
-	As a user,
-	I should be able to specify a number of events shown to me,
-	So that I am not overwhelmed with information and can select a certain number to see at one time.
+As a user,
+I should be able to specify a number of events shown to me,
+So that I am not overwhelmed with information and can select a certain number to see at one time.
 
 ### 4: Use the App When Offline.
-	As a user,
- 	I should be able to use the app while offline,
-	So that I am able to see the events in my city even if I am not connected to an internet source.
+As a user,
+I should be able to use the app while offline,
+So that I am able to see the events in my city even if I am not connected to an internet source.
 
 ### 5: Add an App Shortcut to the Home Screen. 
-	As a user,
-	I should be able to add the app to my home screen,
-	So that I always have easy access to see new events in my city.
+As a user,
+I should be able to add the app to my home screen,
+So that I always have easy access to see new events in my city.
 
 ### 6: Display Charts Visualizing Event Details.
-	As a user,
- 	I should be able to see charts visualizing details of each event,
-	So that I can see the information of each event in a way that is clear and precise.
+As a user,
+I should be able to see charts visualizing details of each event,
+So that I can see the information of each event in a way that is clear and precise.
 
 
 
 ## Gherkins Syntax:
 
 ### 1: Filter events by city.
-    Scenario 1: When the user hasn’t searched for a city, show upcoming events from all cities. 
-        -Given the user hasn’t searched for any city;
-        -When the user opens the app;
-        -Then the user should see a list of upcoming events.
+Scenario 1: When the user hasn’t searched for a city, show upcoming events from all cities. 
+    -Given the user hasn’t searched for any city;
+    -When the user opens the app;
+    -Then the user should see a list of upcoming events.
 
     Scenario 2: User should see a list of suggestions when they search for a city.
 		-Given the main page is open;
