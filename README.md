@@ -42,7 +42,9 @@ So that I can see the information of each event in a way that is clear and preci
 ### 1: Filter events by city.
 Scenario 1: When the user hasn’t searched for a city, show upcoming events from all cities. 
 **Given** the user hasn’t searched for any city;
+
 **When** the user opens the app;
+
 **Then** the user should see a list of upcoming events.
 
     Scenario 2: User should see a list of suggestions when they search for a city.
