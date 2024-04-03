@@ -151,3 +151,7 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 **When** the user clicks a button to show more details about an event;
 
 **Then** the information displayed will also include a chart visualizing the details of the event.
+
+## Serverless Functions
+
+This app will use AWS Lambda functions to implement Serverless functions. take advantage of the benefits of serverless functions by authorizing user access to the public events by obtaining OAuth2 tokens, processing data in real time, enabling event notifications. This app will utilize the serverless functions to provide each user with a personalized experience based on their own needs.
