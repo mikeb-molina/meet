@@ -154,4 +154,4 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 
 ## Serverless Functions
 
-This app will use AWS Lambda functions to implement Serverless functions. take advantage of the benefits of serverless functions by authorizing user access to the public events by obtaining OAuth2 tokens, processing data in real time, enabling event notifications. This app will utilize the serverless functions to provide each user with a personalized experience based on their own needs.
+This app will use AWS Lambda functions to implement Serverless functions. It will take advantage of the benefits of serverless functions by authorizing user access to the public events on the Google Calendar API by obtaining OAuth2 tokens, processing data in real time and enabling event notifications among other things. This app will utilize the serverless functions to provide each user with a personalized experience based on their own needs.
