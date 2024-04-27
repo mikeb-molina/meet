@@ -4,7 +4,6 @@ import { render, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { getEvents } from './api';
 import App from '../App';
-import { application } from 'express';
 
 describe('<App /> component', () => {
     let AppDOM;
@@ -48,4 +47,20 @@ describe('<App /> integration', () => {
             expect(event.textContent).toContain("Berlin, Germany");
         });
     });
-})
+
+    test('number of events rendered matches the number of events inputted by the user', async () => {
+        const AppComponent= render(<App />);
+        const AppDOM = AppComponent.container.firstChild;
+        const NumberOfEventsDOM = AppDOM.querySelector('#number-of-events');
+        const NumberOfEventsInput =
+            within(NumberOfEventsDOM).queryByRole('textbox');
+
+        await userEvent.type(NumberOfEventsInput, "{backspace}{backspace}10");
+
+        const EventListDOM = AppDOM.querySelector('#event-list');
+        const allRenderedEventItems =
+            within(EventListDOM).queryAllByRole('listitem');
+        expect(allRenderedEventItems.length).toEqual(10);
+    })
+
+});
