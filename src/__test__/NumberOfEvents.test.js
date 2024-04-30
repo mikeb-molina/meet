@@ -13,6 +13,12 @@ describe('<NumberOfEvents /> component', () => {
         expect(NumberOfEventsComponent.queryByRole('textbox')).toBeInTheDocument();
     });
 
+    test('renders number of events text input', () => {
+        const numberOfEvents = NumberOfEventsComponent.queryByRole('textbox');
+        expect(numberOfEvents).toBeInTheDocument();
+        expect(numberOfEvents).toHaveClass('number-of-events-input');
+    });
+
     test('default value is 32', () => {
         expect(NumberOfEventsComponent.queryByRole('textbox')).toHaveValue('32');
     });
