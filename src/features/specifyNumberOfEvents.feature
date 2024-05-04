@@ -1,7 +1,7 @@
 Feature: Specify Number of Events
     Scenario: When the user hasnt specified a number, 32 events are shown by default
-        Given the user selects a city to view upcoming events
-        When the user loads the city page
+        Given the user has not specified number of events
+        When the user loads the events
         Then the user will see 32 upcoming events by default
     
     Scenario: User can change the number of events displayed
