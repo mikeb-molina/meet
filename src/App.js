@@ -4,7 +4,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './__test__/api';
 import NumberOfEVents from './components/NumberOfEvents';
-import { ErrorAlert, InfoAlert } from './components/Alert';
+import { ErrorAlert, InfoAlert, WarningAlert } from './components/Alert';
 
 const App = () => {
 const [events, setEvents] = useState([]);
@@ -12,9 +12,15 @@ const [currentNOE, setCurrentNOE] = useState(32);
 const [allLocations, setAllLocations] = useState([]);
 const [currentCity, setCurrentCity] = useState ("See all cities");
 const [ infoAlert, setInfoAlert] = useState("");
-const [ erorAlert, setErrorAlert] = useState("");
+const [ errorAlert, setErrorAlert] = useState("");
+const [ warningAlert, setWarningAlert] = useState("");
 
 useEffect(() =>{
+  if(navigator.onLine) {
+    setWarningAlert('');
+  } else {
+    setWarningAlert('You are offline')
+  }
   fetchData();
 }, [currentCity, currentNOE]);
 
@@ -32,7 +38,8 @@ const fetchData= async () => {
     <div className="App">
       <div className='alerts-container'>
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
-        {erorAlert.length ? <ErrorAlert text={erorAlert}/> : null}
+        {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
       </div>
       <CitySearch 
       allLocations={allLocations} 
